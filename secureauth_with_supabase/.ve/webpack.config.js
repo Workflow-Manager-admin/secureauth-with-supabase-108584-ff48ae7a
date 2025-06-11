@@ -1,54 +1,44 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (env = {}) => ({
-  entry: './src/index.js',
+module.exports = {
+  entry: path.resolve(__dirname, '../src/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
+    publicPath: '/',
     clean: true,
   },
+  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-	    presets: [
-                '@babel/preset-env',
-                ['@babel/preset-react', { runtime: 'automatic' }]
-            ],
-            plugins: env.EDIT_MODE ? [path.resolve('./.ve/babel-plugin-jsx-editor-id.js')] : [],
-          },
-        },
+        test: /\.jsx?$/,
+        include: path.resolve(__dirname, '../src'),
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/i,
-        type: 'asset/resource',
-      },
+        use: ["style-loader", "css-loader"],
+      }
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../public/index.html'),
+      templateParameters: {
+        PUBLIC_URL: ''
+      }
+    }),
+  ],
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
-    static: './public',
-    hot: true,
+    allowedHosts: 'all',
+    host: '0.0.0.0',
+    historyApiFallback: true,
     port: 3000,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      templateParameters: {
-        PUBLIC_URL: '',
-      },
-    }),
-  ],
-  mode: env.production ? 'production' : 'development',
-});
+    hot: true
+  }
+};

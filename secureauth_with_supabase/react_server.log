@@ -39,3 +39,27 @@ javascript modules 29.4 KiB
     ./.ve/EditorOverlay.jsx 1.58 KiB [built]
     ./.ve/SidePanel.js 7.93 KiB [built]
 webpack 5.99.9 compiled successfully in 354 ms
+Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
+assets by status 1.82 MiB [cached] 1 asset
+asset index.html 1.92 KiB [emitted]
+cached modules 1.57 MiB (javascript) 27.5 KiB (runtime) [cached] 110 modules
+javascript modules 29.4 KiB
+  modules by path ./src/*.js 17.2 KiB
+    ./src/index.js 530 bytes [built]
+    ./src/App.js 1.51 KiB [built]
+    ./src/SecureAuth.js 14.7 KiB [built]
+    ./src/supabaseClient.js 447 bytes [built]
+  modules by path ./.ve/ 12.2 KiB
+    ./.ve/EditorRootWrapper.js 2.68 KiB [built]
+    ./.ve/EditorOverlay.jsx 1.58 KiB [built]
+    ./.ve/SidePanel.js 7.93 KiB [built]
+webpack 5.99.9 compiled successfully in 222 ms
+assets by path *.js 1.82 MiB
+  asset bundle.js 1.82 MiB [emitted] (name: main)
+  asset main.9eb4f25a3f4db3127a10.hot-update.js 854 bytes [emitted] [immutable] [hmr] (name: main)
+asset index.html 583 bytes [emitted]
+asset main.9eb4f25a3f4db3127a10.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.82 MiB = bundle.js 1.82 MiB main.9eb4f25a3f4db3127a10.hot-update.js 854 bytes
+cached modules 1.6 MiB [cached] 103 modules
+runtime modules 27.5 KiB 14 modules
+webpack 5.99.9 compiled successfully in 66 ms
