@@ -1,65 +1,36 @@
 
 > react-kavia@0.1.0 start
-> cross-env EDIT_MODE=true webpack serve --config .ve/webpack.config.js --mode development
+> cross-env EDIT_MODE=true webpack serve --config .ve/webpack.config.js --mode development --host 0.0.0.0
 
 <i> [webpack-dev-server] Project is running at:
 <i> [webpack-dev-server] Loopback: http://localhost:3000/, http://[::1]:3000/
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
-<i> [webpack-dev-server] Content not from webpack is served from './public' directory
+<i> [webpack-dev-server] Content not from webpack is served from '/home/kavia/workspace/code-generation/secureauth-with-supabase-108584-ff48ae7a/secureauth_with_supabase/public' directory
+<i> [webpack-dev-server] 404s will fallback to '/index.html'
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.82 MiB [emitted] (name: main)
-asset index.html 1.92 KiB [emitted]
-runtime modules 27.5 KiB 14 modules
+asset bundle.js 1.74 MiB [emitted] (name: main)
+asset index.html 584 bytes [emitted]
+runtime modules 26.5 KiB 14 modules
 orphan modules 409 bytes [orphan] 3 modules
-modules by path ./node_modules/ 1.56 MiB 87 modules
-modules by path ./src/ 24.7 KiB
-  modules by path ./src/*.js 17.2 KiB 4 modules
+modules by path ./node_modules/ 1.52 MiB 85 modules
+modules by path ./src/ 23.7 KiB
+  modules by path ./src/*.js 16.3 KiB
+    ./src/index.js 490 bytes [built] [code generated]
+    + 3 modules
   modules by path ./src/*.css 7.49 KiB
     ./src/index.css 2.23 KiB [built] [code generated]
-    + 3 modules
-modules by path ./.ve/ 15.1 KiB
-  modules by path ./.ve/*.js 10.6 KiB 2 modules
-  modules by path ./.ve/*.css 2.93 KiB
-    ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
-  ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1684 ms
-Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-assets by status 1.82 MiB [cached] 1 asset
-asset index.html 1.92 KiB [emitted]
-cached modules 1.57 MiB (javascript) 27.5 KiB (runtime) [cached] 110 modules
-javascript modules 29.4 KiB
-  modules by path ./src/*.js 17.2 KiB
-    ./src/index.js 530 bytes [built]
-    ./src/App.js 1.51 KiB [built]
-    ./src/SecureAuth.js 14.7 KiB [built]
-    ./src/supabaseClient.js 447 bytes [built]
-  modules by path ./.ve/ 12.2 KiB
-    ./.ve/EditorRootWrapper.js 2.68 KiB [built]
-    ./.ve/EditorOverlay.jsx 1.58 KiB [built]
-    ./.ve/SidePanel.js 7.93 KiB [built]
-webpack 5.99.9 compiled successfully in 354 ms
-Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-assets by status 1.82 MiB [cached] 1 asset
-asset index.html 1.92 KiB [emitted]
-cached modules 1.57 MiB (javascript) 27.5 KiB (runtime) [cached] 110 modules
-javascript modules 29.4 KiB
-  modules by path ./src/*.js 17.2 KiB
-    ./src/index.js 530 bytes [built]
-    ./src/App.js 1.51 KiB [built]
-    ./src/SecureAuth.js 14.7 KiB [built]
-    ./src/supabaseClient.js 447 bytes [built]
-  modules by path ./.ve/ 12.2 KiB
-    ./.ve/EditorRootWrapper.js 2.68 KiB [built]
-    ./.ve/EditorOverlay.jsx 1.58 KiB [built]
-    ./.ve/SidePanel.js 7.93 KiB [built]
-webpack 5.99.9 compiled successfully in 222 ms
-assets by path *.js 1.82 MiB
-  asset bundle.js 1.82 MiB [emitted] (name: main)
-  asset main.9eb4f25a3f4db3127a10.hot-update.js 854 bytes [emitted] [immutable] [hmr] (name: main)
-asset index.html 583 bytes [emitted]
-asset main.9eb4f25a3f4db3127a10.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.82 MiB = bundle.js 1.82 MiB main.9eb4f25a3f4db3127a10.hot-update.js 854 bytes
-cached modules 1.6 MiB [cached] 103 modules
-runtime modules 27.5 KiB 14 modules
-webpack 5.99.9 compiled successfully in 66 ms
+    ./node_modules/css-loader/dist/cjs.js!./src/index.css 875 bytes [built] [code generated]
+    + 2 modules
+./.ve/EditorRootWrapper.js 2.25 KiB [built] [code generated] [1 error]
+
+ERROR in ./.ve/EditorRootWrapper.js 44:4
+Module parse failed: Unexpected token (44:4)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| 
+|   return (
+>     <>
+| 
+|       {/* The actual app content */}
+ @ ./src/index.js 1:0-57 7:45-62
+
+webpack 5.99.9 compiled with 1 error in 1608 ms
